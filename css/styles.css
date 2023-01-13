@@ -19,6 +19,7 @@ ul, p, li{
     padding: 0;
 }
 a {
+    color: inherit;
     text-decoration: none;
 }
 .title.hide{
@@ -151,9 +152,16 @@ body{
     margin-left: 0;
     margin-right: 50px;
 }
+.nav-adress-ico{
+    fill: currentColor;
+}
 .nav-adress .adress-link{
     color: var(--second-color);
     font-weight: 500;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .nav-adress .adress-link:hover,
@@ -162,12 +170,17 @@ body{
 }
 /* Герой */
 .hero{
-    background: var(--bg-dark-color);
+    background-color: #C4C4C4;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
     padding-left: auto;
     padding-right: auto;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)) , url("../images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .hero .buttons{
     letter-spacing: 0.06em;
@@ -199,6 +212,35 @@ body{
     margin-left: 0;
     margin-right: 30px;
 }
+
+.icon-box{
+    width: 270px;
+    height: 120px;
+
+    margin-bottom: 30px;
+    background-color: var(--buttons-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.list-items.antenna::before{
+    background-image: url("../images/antenna-ico.svg");
+}
+
+.list-items.clock::before{
+    background-image: url("../images/clock-ico.svg");
+}
+
+.list-items.diagram::before{
+    background-image: url("../images/diagram-ico.svg");
+}
+
+.list-items.astronaut::before{
+    background-image: url("../images/astronaut-ico.svg");
+}
+
 .features-list .list-items:last-child{
     margin-right: 0;
 }
@@ -278,12 +320,88 @@ body .team{
 .card .card-text{
     color: var(--second-color);
     letter-spacing: 0.03em;
+    margin-bottom: 16px;
 }
+.soc-list{
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+.soc-items{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #AFB1B8;
+}
+.soc-items:hover,
+.soc-items:focus{
+    background-color: var(--acsent-color);
+    color:var(--white-color);
+}
+.soc-ico-link{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+}
+.soc-ico{
+    
+    fill: currentColor;
+}
+
 .card .card-box{
     background-color: var(--main-bg-color);
     padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 0px 0px 4px 4px;
+}
+/* Клієнти */
+.clients .title{
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    text-align: center;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.clients-list{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.clients-items .link{
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.clients-items{
+    width: 170px;
+    height: 92px;
+    display: flex;
+    color: #AFB1B8;
+
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+.clients-items:hover,
+.clients-items:focus{
+    color: var(--acsent-color);
+    border: 1px solid var(--acsent-color);
+}
+.clients-items .icon,
+.clients-items .icon{
+    fill: currentColor;
 }
 /* Футер */
 .footer .logo{
@@ -323,6 +441,29 @@ body .team{
 .footer .foot-link:focus{
     color: var(--acsent-color)
 }
+.footer .container{
+    display: flex;
+    gap: 70px;
+}
+.footer-text{
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+.footer .soc-items{
+    background-color: rgba(255, 255, 255, 0.1);
+    color:var(--white-color);
+}
+.footer .soc-items:hover,
+.footer .soc-items:focus{
+    background-color: var(--acsent-color);
+    color:var(--white-color);
+}
 /*            Портфоліо          */
 /* Фільтри */
 .filter-group{
@@ -343,6 +484,11 @@ body .team{
     gap: 30px;
     padding: 0;
 }
+.cards-list:hover,
+.cards-list:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .cards-list .card-title{
     color: var(--main-color);
     font-size: 18px;

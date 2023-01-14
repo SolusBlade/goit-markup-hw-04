@@ -174,8 +174,11 @@ body{
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+    max-width: 1600px;
     padding-left: auto;
     padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)) , url("../images/hero-bg.jpg");
     background-repeat: no-repeat;
@@ -333,20 +336,21 @@ body .team{
     border-radius: 50%;
     color: #AFB1B8;
 }
-.soc-items:hover,
-.soc-items:focus{
-    background-color: var(--acsent-color);
-    color:var(--white-color);
-}
+
 .soc-ico-link{
     display: flex;
     width: 44px;
     height: 44px;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+}
+.soc-ico-link:hover,
+.soc-ico-link:focus{
+    background-color: var(--acsent-color);
+    color:var(--white-color);
 }
 .soc-ico{
-    
     fill: currentColor;
 }
 
@@ -382,23 +386,18 @@ body .team{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #AFB1B8;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
     
 }
 
-.clients-items{
-    width: 170px;
-    height: 92px;
-    display: flex;
-    color: #AFB1B8;
-
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-}
-.clients-items:hover,
-.clients-items:focus{
+.clients-items .link:hover,
+.clients-items .link:focus{
     color: var(--acsent-color);
     border: 1px solid var(--acsent-color);
 }
+
 .clients-items .icon,
 .clients-items .icon{
     fill: currentColor;
